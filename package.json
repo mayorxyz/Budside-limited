@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/style.css -o ./public/style.css -m",
-    "dev:css": "tailwindcss -i ./src/style.css -o ./public/style.css -w",
+    "build:css": "tailwindcss -i ./public/src/style.css -o ./public/style.css -m",
+    "dev:css": "tailwindcss -i ./public/src/style.css -o ./public/style.css -w",
     "serve": "live-server ./public",
     "dev": "concurrently \"npm run dev:css\" \"npm run serve\"",
     "build": "npm run build:css"
