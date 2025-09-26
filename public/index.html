@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budside Limited - Professional Heavy Construction Services</title>
+    <meta name="description" content="Professional heavy construction services delivering projects on time, within budget. Civil engineering construction, equipment sales & lease, construction materials." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="bg-white">
+ <!-- Floating Navigation -->
+    <nav id="navbar" class="fixed top-4 left-4 right-4 z-50">
+        <div class="floating-nav px-6 py-3">
+            <div class="flex justify-between items-center">
+                
+                <!-- Logo -->
+                <a href="#home" class="logo">
+                    <img src="/picture/Picture1.png" 
+                         alt="Budside Limited Logo" 
+                         class="logo-img"
+                            onerror="this.src='https://via.placeholder.com/150x50?text=Budside+Limited'; this.onerror=null;" />
+                    <span class="hidden sm:inline">Budside Limited</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mobile-menu mx-4">
+            <a href="#home" class="mobile-nav-link" onclick="setActive(this)">Home</a>
+            <a href="#services" class="mobile-nav-link" onclick="setActive(this)">Services</a>
+            <a href="#about" class="mobile-nav-link" onclick="setActive(this)">About</a>
+            <a href="#projects" class="mobile-nav-link" onclick="setActive(this)">Projects</a>
+            <a href="#contact" class="mobile-nav-link" onclick="setActive(this)">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+        <section id="home" class="hero-bg relative flex items-center justify-center pt-10">
+        <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent">
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <div class="max-w-4xl mx-auto fade-in-up">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+                    Build Your Vision with 
+                    <span class="text-blue-500">Budside Limited</span> 
+                    Professional Construction
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                    The construction company of choice providing the most efficient services and quality products
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg smooth-transition hover-lift">
+                        Get Free Quote
+                    </button>
+                    <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})" 
+                            class="bg-white/20 hover:bg-white/30 text-white font-semibold py-4 px-8 rounded-lg border border-white/30 hover:border-white/50 smooth-transition">
+                        View Projects
+                    </button>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-blue-300 mb-2">15+</div>
+                        <div class="text-gray-300">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-blue-300 mb-2">100+</div>
+                        <div class="text-gray-300">Completed Projects</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-blue-300 mb-2">100%</div>
+                        <div class="text-gray-300">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+<section class="problems-section py-16">
+  <div class="container mx-auto px-4 sm:px-6">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+        Tired of Construction Nightmares?
+      </h2>
+      <p class="text-base sm:text-lg text-gray-600">
+        Don't let unreliable contractors destroy your project timeline and budget
+      </p>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:gap-12">
+      
+      <!-- Problems List -->
+      <div class="flex-1 flex flex-col gap-6">
+        <!-- Problem Item -->
+        <div class="flex items-start gap-4 bg-red-50 rounded-lg p-4 shadow-sm">
+          <div class="flex-shrink-0 w-10 h-10 bg-red-200 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-gray-900">Budget Overruns</h3>
+            <p class="text-gray-600 text-sm sm:text-base">Projects costing 30-50% more than quoted due to hidden fees and poor planning</p>
+            <div class="text-xs sm:text-sm text-red-700 mt-2">Average cost increase: <span class="font-bold">$125,000</span></div>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-yellow-50 rounded-lg p-4 shadow-sm">
+          <div class="flex-shrink-0 w-10 h-10 bg-yellow-200 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-gray-900">Timeline Delays</h3>
+            <p class="text-gray-600 text-sm sm:text-base">Projects taking months longer than promised, costing you revenue and credibility</p>
+            <div class="text-xs sm:text-sm text-yellow-700 mt-2">Average delay: <span class="font-bold">4.5</span> months</div>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-red-50 rounded-lg p-4 shadow-sm">
+          <div class="flex-shrink-0 w-10 h-10 bg-red-200 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-gray-900">Safety Violations</h3>
+            <p class="text-gray-600 text-sm sm:text-base">Accidents and OSHA violations that shut down projects and create liability</p>
+            <div class="text-xs sm:text-sm text-red-700 mt-2">Industry average: <span class="font-bold">2.8</span> incidents per project</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem Image -->
+      <div class="flex-1 mt-8 lg:mt-0">
+        <div class="relative w-full rounded-lg overflow-hidden shadow-md">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3"
+               alt="Construction problems"
+               class="w-full h-56 sm:h-72 md:h-[28rem] object-cover"
+               onerror="this.src='https://images.pixabay.com/photo/2016/11/29/06/15/construction-site-1867383_1280.jpg'; this.onerror=null;" />
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute bottom-2 left-0 right-0 text-center">
+            <span class="text-white text-sm sm:text-base font-semibold bg-black/60 px-3 py-1 rounded">
+              Don't let this be your project
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Budside Limited provides comprehensive construction solutions across multiple specialties
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-lift smooth-transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Civil Engineering Construction</h3>
+                    <p class="text-gray-600">Complete construction of buildings, roads, drainage, ramps, retaining walls, canals and other civil engineering works.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-lift smooth-transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Sale and Lease of Construction Equipment</h3>
+                    <p class="text-gray-600">Comprehensive equipment solutions including sale and lease of construction machinery for various project needs.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-lift smooth-transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Sale of Construction Materials</h3>
+                    <p class="text-gray-600">Quality construction materials including aggregates, crushed stone, sand, and building materials for all project requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Nature of Business -->
+    <section id="nature-of-business" class="nature max-w-6xl mx-auto">
+        <div class="bg-blue-50 border border-gray-300 rounded-lg p-12 mb-20">
+            <h3 class="text-3xl font-bold text-gray-800 mb-12 text-center">Nature of Business</h3>
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
+                <div>
+                    <h4 class="font-bold text-xl text-gray-800 mb-4">I) Construction Services</h4>
+                    <p class="text-gray-600 text-base leading-relaxed">Construction of buildings, roads, drainage, ramps, retaining walls canals and other civil engineering works.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl text-gray-800 mb-4">II) Modular Structures</h4>
+                    <p class="text-gray-600 text-base leading-relaxed">On-site and off-site fabrication of modular structures for buildings roads, drainage and other structures.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl text-gray-800 mb-4">III) Equipment Solutions</h4>
+                    <p class="text-gray-600 text-base leading-relaxed">Sale and lease of construction equipment.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl text-gray-800 mb-4">IV) Materials Supply</h4>
+                    <p class="text-gray-600 text-base leading-relaxed">Sale of construction material, aggregate, crushed stone, sand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">About Budside Limited</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Your trusted partner in construction excellence with over 15 years of industry experience
+                </p>
+            </div>
+
+            <!-- Vision and Mission -->
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-lift smooth-transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        To be the construction company of choice providing the most efficient services and quality products.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-lift smooth-transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mission</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        To encourage the use of current technology, quality materials and skilled personnel for timely delivery of projects to the satisfaction of the customer.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900 mb-12 text-center">Our Team</h1>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-lift smooth-transition">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Oreva Sylvester" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Oreva Sylvester</h4>
+                        <p class="text-blue-600 font-semibold">Managing Director</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-lift smooth-transition">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Engr. Kamuel Boma" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Engr. Kamuel Boma</h4>
+                        <p class="text-blue-600 font-semibold">Project Director</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-lift smooth-transition">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Engr. Ikpe Ndifreke" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Engr. Ikpe Ndifreke</h4>
+                        <p class="text-blue-600 font-semibold">Site Engineer and Procurement</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-lift smooth-transition">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&h=200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Obialor Thomas Emmanuel" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Obialor Thomas Emmanuel</h4>
+                        <p class="text-blue-600 font-semibold">Senior Quantity Surveyor and Cost Controller</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-lift smooth-transition">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Charles K. Chigbu" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Charles K. Chigbu</h4>
+                        <p class="text-blue-600 font-semibold">Quantity Surveyor And Materials Procurement</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-lift smooth-transition">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Botchway Patrick" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Botchway Patrick</h4>
+                        <p class="text-blue-600 font-semibold">Site Manager, Building Materials Procurement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Benefits Section -->
+    <section class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Why Choose Budside limited?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Two decades of excellence in heavy construction with an unmatched safety record
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Experienced Crews -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Experienced Crews</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Certified operators with average 15+ years experience in heavy construction</p>
+                    <div class="text-sm text-blue-600 font-semibold">85+ certified professionals</div>
+                </div>
+                
+                <!-- Modern Equipment -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Modern Equipment Fleet</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Latest machinery with GPS tracking, fuel efficiency, and precision controls</p>
+                    <div class="text-sm text-orange-500 font-semibold">50+ pieces of equipment</div>
+                </div>
+                
+                <!-- Safety Certifications -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Safety Certifications</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">OSHA compliant with comprehensive safety protocols and training programs</p>
+                    <div class="text-sm text-green-600 font-semibold">Zero major incidents</div>
+                </div>
+                
+                <!-- Project Management -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Project Management</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Dedicated project managers with real-time progress tracking and reporting</p>
+                    <div class="text-sm text-blue-600 font-semibold">98% on-time completion</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Social Proof & Testimonials -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-text-primary mb-6">
+                    Trusted by Industry Leaders
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    See what our clients say about our construction services and project delivery
+                </p>
+            </div>
+            
+            <!-- Client Logos -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16 opacity-60">
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
+                    <span class="font-bold text-text-muted">ACME Corp</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
+                    <span class="font-bold text-text-muted">BuildTech</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
+                    <span class="font-bold text-text-muted">Metro Dev</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
+                    <span class="font-bold text-text-muted">City Works</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
+                    <span class="font-bold text-text-muted">ProBuild</span>
+                </div>
+                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
+                    <span class="font-bold text-text-muted">Urban Plus</span>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-card testimonial-border">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Client testimonial" class="w-12 h-12 rounded-full object-cover mr-4" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Michael Rodriguez</h4>
+                            <p class="text-sm text-text-muted">Project Manager, Metro Development</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary italic mb-4">
+                        "Budside Limited delivered our 50-acre commercial development 2 weeks ahead of schedule and $200k under budget. Their safety record and equipment quality are unmatched."
+                    </p>
+                    <div class="flex text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-card testimonial-border">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=150&h=150&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Client testimonial" class="w-12 h-12 rounded-full object-cover mr-4" onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Sarah Chen</h4>
+                            <p class="text-sm text-text-muted">Director, BuildTech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary italic mb-4">
+                        "Their excavation work for our industrial complex was flawless. Professional crew, modern equipment, and zero safety incidents throughout the 6-month project."
+                    </p>
+                    <div class="flex text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+    
+                
+                <div class="bg-white p-8 rounded-lg shadow-card testimonial-border">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Client testimonial" class="w-12 h-12 rounded-full object-cover mr-4" onerror="this.src='https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">David Thompson</h4>
+                            <p class="text-sm text-text-muted">Municipal Engineer, City Works</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary italic mb-4">
+                        "Budside Limited handled our infrastructure upgrade with exceptional professionalism. Their project management and communication kept everything on track."
+                    </p>
+                    <div class="flex text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+ <!-- Project Gallery -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Our <span class="highlight">Projects</span>
+                </h2>
+                <p class="section-subtitle">
+                    Discover our portfolio of successfully completed construction projects across 
+                    Port Harcourt and Rivers State.
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" onclick="openProjectModal('project1')">
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Construction of Hilltop Plaza project" 
+                             class="project-image"
+                             onerror="this.src='https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'; this.onerror=null;" />
+                        <div class="project-category commercial">Commercial Development</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Construction of Hilltop Plaza</h3>
+                        <p class="project-description">A state-of-the-art commercial plaza featuring modern architecture and premium amenities.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <div class="project-detail-icon location"></div>
+                                <span class="project-detail-text">Port Harcourt, Rivers State</span>
+                            </div>
+                            <div class="project-detail">
+                                <div class="project-detail-icon status"></div>
+                                <span class="project-detail-text">Completed Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" onclick="openProjectModal('project2')">
+                    <div class="project-image-container">
+                        <img src="https://images.pexels.com/photos/162539/architecture-building-construction-work-162539.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                             alt="Construction of Rosyl Centre project" 
+                             class="project-image"
+                             onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="project-category mixed-use">Mixed-Use Development</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Construction of Rosyl Centre</h3>
+                        <p class="project-description">A comprehensive mixed-use development combining retail, office, and residential spaces.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <div class="project-detail-icon location"></div>
+                                <span class="project-detail-text">Port Harcourt, Rivers State</span>
+                            </div>
+                            <div class="project-detail">
+                                <div class="project-detail-icon status"></div>
+                                <span class="project-detail-text">Completed Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" onclick="openProjectModal('project3')">
+                    <div class="project-image-container">
+                        <img src="https://images.pixabay.com/photo/2016/11/29/06/15/construction-site-1867383_1280.jpg" 
+                             alt="Construction of Open Plan Office project" 
+                             class="project-image"
+                             onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="project-category office">Office Complex</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Construction of Open Plan Office and Room Building</h3>
+                        <p class="project-description">Modern office building with flexible open plan workspace and private room configurations.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <div class="project-detail-icon location"></div>
+                                <span class="project-detail-text">Port Harcourt, Rivers State</span>
+                            </div>
+                            <div class="project-detail">
+                                <div class="project-detail-icon status"></div>
+                                <span class="project-detail-text">Completed Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" onclick="openProjectModal('project4')">
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Stadium Road Port Harcourt project" 
+                             class="project-image"
+                             onerror="this.src='https://images.pexels.com/photos/162539/architecture-building-construction-work-162539.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'; this.onerror=null;" />
+                        <div class="project-category infrastructure">Infrastructure Development</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Stadium Road Port Harcourt Development</h3>
+                        <p class="project-description">Strategic infrastructure development project enhancing connectivity and urban development.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <div class="project-detail-icon location"></div>
+                                <span class="project-detail-text">Stadium Road, Port Harcourt</span>
+                            </div>
+                            <div class="project-detail">
+                                <div class="project-detail-icon status"></div>
+                                <span class="project-detail-text">Completed Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal (optional) -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+     <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Get In Touch</h2>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Ready to start your next project? Contact us today for a free consultation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Address</h4>
+                                <p class="text-blue-100">245 PH-ABA EXPRESSWAY, RUMUOGBA, PORTHARCOURT, RIVERS STATE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Phone</h4>
+                                <p class="text-blue-100">08023388802</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Email</h4>
+                                <p class="text-blue-100">budsidemasters@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-black/10 p-8 rounded-lg backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold mb-6">Send us a Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Phone Number">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Project Type</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                <option value="" class="text-gray-800">Select Project Type</option>
+                                <option value="civil" class="text-gray-800">Civil Engineering Construction</option>
+                                <option value="equipment" class="text-gray-800">Equipment Sale/Lease</option>
+                                <option value="materials" class="text-gray-800">Construction Materials</option>
+                                <option value="other" class="text-gray-800">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg smooth-transition hover-lift">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                            <div class="w-8 h-8 bg-white rounded-sm flex items-center justify-center">
+                                <!-- Logo -->
+                                <a href="#home" class="logo">
+                                    <img src="/picture/Picture1.png" 
+                                        alt="Budside Limited Logo" 
+                                        class="logo-img"
+                                            onerror="this.src='https://via.placeholder.com/150x50?text=Budside+Limited'; this.onerror=null;" />
+                                </a>
+                            </div>
+                        </div>
+                        <span class="text-xl font-bold">Budside Limited</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        The construction company of choice providing the most efficient services and quality products with skilled personnel for timely delivery of projects.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#home" class="hover:text-blue-400 smooth-transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-blue-400 smooth-transition">About</a></li>
+                        <li><a href="#services" class="hover:text-blue-400 smooth-transition">Services</a></li>
+                        <li><a href="#projects" class="hover:text-blue-400 smooth-transition">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>Civil Engineering Construction</li>
+                        <li>Equipment Sale & Lease</li>
+                        <li>Construction Materials</li>
+                        <li>Modular Structures</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Budside Limited. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 smooth-transition text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 smooth-transition text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+<style>
+    .hide-nav { transform: translateY(-100%); transition: transform 0.3s; }
+    .show-nav { transform: translateY(0); transition: transform 0.3s; }
+</style>
+</body>
+</html>
