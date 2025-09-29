@@ -73,3 +73,14 @@ document.querySelectorAll('section > div').forEach(el => {
     observer.observe(el);
 });
 
+// Lazy-load all images for mobile performance
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+        img.setAttribute('decoding', 'async');
+        img.setAttribute('fetchpriority', 'low');
+    });
+});
+
