@@ -84,3 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//send us a message
+const toggleBtn = document.getElementById('toggleForm');
+  const form = document.getElementById('contactForm');
+  const arrow = document.getElementById('arrow');
+
+  toggleBtn.addEventListener('click', () => {
+    if (form.style.maxHeight) {
+      form.style.maxHeight = null;
+    } else {
+      form.style.maxHeight = form.scrollHeight + "px";
+    }
+    arrow.classList.toggle('rotate-180');
+  });
