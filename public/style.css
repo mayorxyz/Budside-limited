@@ -439,9 +439,6 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -1065,11 +1062,6 @@
   .lg\:grid-cols-4 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-  .lg\:grid-cols-6 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
     }
   }
   .lg\:flex-row {
@@ -2101,37 +2093,19 @@ img {
     padding-bottom: 2.5rem !important;
   }
 }
-.logos-container {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background: transparent;
-}
-.logos-track {
-  display: flex;
-  width: calc(200%);
-  animation: scrollLeft 20s linear infinite;
-}
-.logo-item {
-  flex: 0 0 auto;
-  width: 200px;
-  height: 80px;
-  margin: 0 20px;
-  background: white;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-@keyframes scrollLeft {
-  from {
+@keyframes scroll {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
+}
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
 @property --tw-rotate-x {
   syntax: "*";

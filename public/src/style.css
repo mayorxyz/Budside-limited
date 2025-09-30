@@ -21,7 +21,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* 🔥 Keeps the image from moving */
-    min-block-size: 100vh;
+    min-block-size: 90vh;
   }
 
   .nav-link, .mobile-link {
@@ -1204,20 +1204,20 @@ img {
     padding-bottom: 2.5rem !important;
   }
 }
-/* moving review logo */
+/* moving review logo on testimonials*/
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-60%);
     }
 }
 
 .animate-scroll {
-    animation: scroll 20s linear infinite;
+    animation: scroll 5s linear infinite;
 }
 
 .animate-scroll:hover {
-    animation-play-state: paused;
+    animation-play-state: ;
 }
