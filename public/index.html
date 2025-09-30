@@ -55,15 +55,9 @@
     </nav>
 
     <!-- Hero Section -->
-        <section id="home" class="hero-bg">
-            <!-- Background Video -->
-            <video autoplay muted loop playsinline>
-                <source src="./picture/Background Video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        
-            <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-black/60"></div>
+        <section id="home" class="hero-bg relative flex items-center justify-center pt-10">
+        <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent">
+        </div>
         
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
             <div class="max-w-4xl mx-auto fade-in-up">
@@ -417,24 +411,47 @@
             </div>
             
             <!-- Client Logos -->
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16 opacity-60">
-                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
-                    <span class="font-bold text-text-muted">ACME Corp</span>
-                </div>
-                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
-                    <span class="font-bold text-text-muted">BuildTech</span>
-                </div>
-                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
-                    <span class="font-bold text-text-muted">Metro Dev</span>
-                </div>
-                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
-                    <span class="font-bold text-text-muted">City Works</span>
-                </div>
-                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
-                    <span class="font-bold text-text-muted">ProBuild</span>
-                </div>
-                <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card">
-                    <span class="font-bold text-text-muted">Urban Plus</span>
+            <div class="relative overflow-hidden mb-16">
+                <div class="flex gap-8 animate-scroll">
+                    <!-- First set of logos -->
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">ACME Corp</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">BuildTech</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">Metro Dev</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">City Works</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">ProBuild</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">Urban Plus</span>
+                    </div>
+                    
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">ACME Corp</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">BuildTech</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">Metro Dev</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">City Works</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">ProBuild</span>
+                    </div>
+                    <div class="flex items-center justify-center h-16 bg-white rounded-lg shadow-card min-w-[200px] opacity-60">
+                        <span class="font-bold text-text-muted">Urban Plus</span>
+                    </div>
                 </div>
             </div>
             
