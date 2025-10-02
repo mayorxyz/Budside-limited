@@ -1221,3 +1221,15 @@ img {
 .animate-scroll:hover {
     animation-play-state: ;
 }
+
+/* projects */
+
+.section-subtitle {
+  font-size: 1rem; /* default (desktop/tablet) */
+}
+
+@media (max-width: 640px) {
+  .section-subtitle {
+    font-size: 0.875rem; /* smaller on mobile */
+  }
+}
