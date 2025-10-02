@@ -1205,22 +1205,28 @@ img {
   }
 }
 /* moving review logo on testimonials*/
+/* Keyframes for seamless scroll */
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-60%);
+        transform: translateX(-50%); /* move full width of one copy */
     }
 }
 
+/* Apply animation */
 .animate-scroll {
-    animation: scroll 5s linear infinite;
+    display: flex;
+    width: max-content;
+    animation: scroll 10s linear infinite; /* adjust duration */
 }
 
+/* Optional: pause on hover */
 .animate-scroll:hover {
-    animation-play-state: ;
+    animation-play-state: paused;
 }
+
 
 /* projects */
 
