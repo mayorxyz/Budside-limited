@@ -20,7 +20,7 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* 🔥 Keeps the image from moving */
+    background-attachment: scroll; /* 🔥 Keeps the image from moving */
     min-block-size: 90vh;
   }
 
